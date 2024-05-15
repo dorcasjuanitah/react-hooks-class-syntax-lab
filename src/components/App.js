@@ -7,14 +7,14 @@ import About from "./About";
 import user from "../data/user";
 console.log(user);
 
-function App() {
-  return (
+class App extends React.Component {
+  render() { return (
     <div>
       <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
+      <Home username={this.user.name} city={this.user.city} color={this.user.color} />
+      <About bio={this.user.bio} links={this.user.links} />
     </div>
   );
-}
+}}
 
 export default App;
